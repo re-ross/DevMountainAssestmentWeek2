@@ -50,9 +50,8 @@ const deliveryAreaZipCodes = [85205, 85204, 85203, 85213, 85206];
 
 //CODE HERE
 function canWeDeliver(zipCode) {
-  if (deliveryAreaZipCodes.includes(zipCode)) {
-    console.log("true");
-  } else console.log("false");
+  console.log();
+  deliveryAreaZipCodes.includes(zipCode);
 }
 
 // canWeDeliver(11111);
