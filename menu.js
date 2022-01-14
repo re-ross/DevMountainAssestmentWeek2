@@ -7,7 +7,6 @@
     and filtering those arrays. 
 */
 
-
 //////////////////PROBLEM 1////////////////////
 /*  
     Create an object called `pizza` that has 6
@@ -31,8 +30,14 @@
 */
 
 //CODE HERE
-
-
+let pizza = {
+  name: "Nashville Hot Pizza",
+  price: 14,
+  category: "Favorites",
+  popularity: 10,
+  rating: 10,
+  tags: ["pizza", "spice", "tasty", "most popular"],
+};
 
 //////////////////PROBLEM 2////////////////////
 /* 
@@ -43,7 +48,7 @@
 */
 
 //CODE HERE
-
+console.log(pizza.popularity);
 
 /*
     Second, log the second tag in your pizza's
@@ -53,8 +58,7 @@
 */
 
 //CODE HERE
-
-
+console.log(pizza.tags[2]);
 /*
     Third, destructure the price off of the
     pizza object.
@@ -63,8 +67,8 @@
 */
 
 //CODE HERE
-
-
+let { price } = pizza;
+console.log(price);
 /*
     Fourth, and last, destructure the category
     property.
@@ -73,8 +77,8 @@
 */
 
 //CODE HERE
-
-
+let { category } = pizza;
+console.log(category);
 //////////////////PROBLEM 3////////////////////
 /* 
     Create an array with about 5 objects in it.
@@ -88,9 +92,43 @@
 */
 
 //CODE HERE
-
-
-
+let foodArr = [
+  {
+    name: "Texas BBQ",
+    price: 12,
+    popularity: 9,
+    rating: 10,
+    tags: "pizza', 'local fav', 'popular'",
+  },
+  {
+    name: "Hawaii",
+    price: 8,
+    popularity: 5,
+    rating: 5,
+    tags: "pizza', 'controversial', 'tasty'",
+  },
+  {
+    name: "Veggie",
+    price: 9,
+    popularity: 7,
+    rating: 7,
+    tags: "pizza', 'healthy', 'popular'",
+  },
+  {
+    name: "Pepporini",
+    price: 9,
+    popularity: 8.5,
+    rating: 8,
+    tags: "pizza', 'basic', 'popular'",
+  },
+  {
+    name: "Cheeeeese",
+    price: 7,
+    popularity: 7.5,
+    rating: 7.5,
+    tags: "pizza', 'basic', 'popular','kids'",
+  },
+];
 //////////////////PROBLEM 4////////////////////
 /* 
     Let's filter the food objects according
@@ -105,9 +143,8 @@
 
 //CODE HERE
 
-// const filteredFood = foodArr.filter(/* CALLBACK HERE */)
-
-
+let foundFood = foodArr.filter((object) => object.tags.includes("popular"));
+console.log(foundFood);
 
 //////////////////PROBLEM 5////////////////////
 /* 
@@ -149,7 +186,10 @@
 */
 
 //CODE HERE
-
+function filterByProperty(property, number) {
+  let newArr = foodArr.filter((object) => this.property > number);
+  return newArr;
+}
 
 /*
     Invoke the `filterByProperty` function passing
@@ -159,3 +199,4 @@
 */
 
 //CODE HERE
+console.log(filterByProperty(this.popularity, 8));
