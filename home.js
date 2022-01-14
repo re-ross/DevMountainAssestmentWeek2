@@ -76,15 +76,19 @@ function canWeDeliver(zipCode) {
 
 // CODE HERE
 function canWeDeliver2(zipCode) {
+  let result = "true";
   for (let i = 0; i < deliveryAreaZipCodes.length; i++) {
     if (zipCode !== deliveryAreaZipCodes[i]) {
-      console.log("false");
-    } else console.log("true");
+      return (result = "false");
+    } else {
+      return (result = "true");
+    }
   }
+  return console.log(result);
 }
 
-canWeDeliver2(11111);
-canWeDeliver2(85205);
+console.log(canWeDeliver2(11111));
+console.log(canWeDeliver2(85205));
 //////////////////PROBLEM 3////////////////////
 /* 
     Below is an array of objects that have some
