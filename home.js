@@ -123,10 +123,11 @@ const deals = [
 */
 
 //CODE HERE
-// console.log(deals[0]);
+
 deals[0].title = deals[0].title.replace("15", "10");
 
-console.log(deals[0]);
+// console.log(deals[0]);
+console.log(deals);
 /*
     The restaurant is going to continue its
     family deal for another month. 
@@ -143,4 +144,5 @@ console.log(deals[0]);
 //CODE HERE
 deals[1].desc = deals[1].desc.trim("").replace("March", "April");
 
-console.log(deals[1]);
+// console.log(deals[1]);
+console.log(deals);
