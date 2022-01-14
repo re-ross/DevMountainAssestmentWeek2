@@ -96,9 +96,10 @@ console.log(calcFinalPrice(15, 2, 0.07));
 
 //CODE HERE
 let customer = {
-  Name: "",
-  Address: "",
-  Items: "",
-  Total: Number,
-  Delivery: false,
+  Name: "Jeff Goldblum",
+  Address: "1234 Goldblum Ave",
+  Items: "Cucumber Salad",
+  Total: 24,
+  Delivery: true,
 };
+console.log(customer);
