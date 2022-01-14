@@ -7,7 +7,6 @@
     creating customer objects.  
 */
 
-
 //////////////////PROBLEM 1////////////////////
 /*  
     Below is a cart array that has food objects
@@ -19,24 +18,27 @@
 */
 
 const cart = [
-    {
-        name: 'pizza', 
-        price: 9.99
-    }, 
-    {
-        name: 'pasta', 
-        price: 8.99
-    }, 
-    {
-        name: 'salad', 
-        price: 7.99
-    }
-]
+  {
+    name: "pizza",
+    price: 9.99,
+  },
+  {
+    name: "pasta",
+    price: 8.99,
+  },
+  {
+    name: "salad",
+    price: 7.99,
+  },
+];
 
 //CODE HERE
 
-// const summedPrice = cart.reduce(/* CALLBACK HERE */)
+const summedPrice = cart.reduce(function (acc, currentValue) {
+  return acc + currentValue.price;
+}, 0);
 
+console.log(summedPrice);
 
 //////////////////PROBLEM 2////////////////////
 /*  
@@ -54,9 +56,10 @@ const cart = [
 */
 
 //CODE HERE
-
-
-
+function calcFinalPrice(cartTotal, couponValue, tax) {
+  return (cartTotal - couponValue) * (tax + 1);
+}
+console.log(calcFinalPrice(15, 2, 0.07));
 //////////////////PROBLEM 3////////////////////
 /*  
     In this problem, you'll create a model for 
@@ -79,7 +82,11 @@ const cart = [
 
 /*
     TEXT ANSWER HERE
-
+////// A Customer object would need 
+//// Customer Name and Address, which would be strings
+//// Item(s) ordered which is also a string
+//// Total amount as a number
+//// deliver could be a boolean
 */
 
 /*
@@ -88,3 +95,10 @@ const cart = [
 */
 
 //CODE HERE
+let customer = {
+  Name: "",
+  Address: "",
+  Items: "",
+  Total: Number,
+  Delivery: false,
+};
