@@ -186,10 +186,28 @@ console.log(foundFood);
 */
 
 //CODE HERE
-function filterByProperty(property, number, type) {
-  let newArr = foodArr.filter((object) => this.property > number);
-  return newArr;
-}
+const filterByProperty = (property, number, type) => {
+  if (!["above", "below"].includes(type)) {
+    console.warn(
+      `type: S{type} operation is not supported, use above or below`
+    );
+    return;
+  }
+  if (!["price", "popularity", "rating"].includes(property)) {
+    console.warn(
+      `property : S{property} is not supported, use price, popularity, or rating`
+    );
+    return;
+  }
+  let filteredFoods = foodArr.filter((food) => {
+    if (type === "above") {
+      return food[`${property}`] >= number;
+    } else if (type === "below") {
+      return food[`${property}`] <= number;
+    }
+  });
+  return filteredFoods;
+};
 
 /*
     Invoke the `filterByProperty` function passing
@@ -199,3 +217,5 @@ function filterByProperty(property, number, type) {
 */
 
 //CODE HERE
+console.log(filterByProperty("rating", 8, "above"));
+console.log(filterByProperty("price", 10, "below"));
