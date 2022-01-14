@@ -142,7 +142,7 @@ console.log(deals);
 */
 
 //CODE HERE
-deals[1].desc = deals[1].desc.trim("").replace("March", "April");
+deals[1].desc = deals[1].desc.trim().replace("March", "April");
 
 // console.log(deals[1]);
 console.log(deals);
