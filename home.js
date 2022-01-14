@@ -7,7 +7,6 @@
     page of the restaurant's website.
 */
 
-
 //////////////////PROBLEM 1////////////////////
 /* 
     Write an *arrow* function called `greetUser`
@@ -22,10 +21,10 @@
 */
 
 //CODE HERE
-
-
-
-
+greetUser = (userName) => {
+  return `Welcome back ${userName}`;
+};
+console.log(greetUser("Ryan"));
 
 //////////////////PROBLEM 2////////////////////
 /* 
@@ -47,12 +46,17 @@
         // `You're in our delivery zone!`
 */
 
-const deliveryAreaZipCodes = [85205, 85204, 85203, 85213, 85206]
+const deliveryAreaZipCodes = [85205, 85204, 85203, 85213, 85206];
 
 //CODE HERE
+function canWeDeliver(zipCode) {
+  if (deliveryAreaZipCodes.includes(zipCode)) {
+    console.log("true");
+  } else console.log("false");
+}
 
-
-
+// canWeDeliver(11111);
+// canWeDeliver(85205);
 /* 
     Problem 2 Continued
 
@@ -71,8 +75,16 @@ const deliveryAreaZipCodes = [85205, 85204, 85203, 85213, 85206]
 */
 
 // CODE HERE
+function canWeDeliver2(zipCode) {
+  for (let i = 0; i < deliveryAreaZipCodes.length; i++) {
+    if (zipCode !== deliveryAreaZipCodes[i]) {
+      console.log("false");
+    } else console.log("true");
+  }
+}
 
-
+canWeDeliver2(11111);
+canWeDeliver2(85205);
 //////////////////PROBLEM 3////////////////////
 /* 
     Below is an array of objects that have some
@@ -87,15 +99,15 @@ const deliveryAreaZipCodes = [85205, 85204, 85203, 85213, 85206]
 */
 
 const deals = [
-    {
-        title: '15% Off!', 
-        desc: 'Applied to your entire order when you spend $30 or more'
-    }, 
-    {
-        title: 'Free Kids Meal with 2 Regular Entrees', 
-        desc: '   This deal lasts until the end of March! '
-    }
-]
+  {
+    title: "15% Off!",
+    desc: "Applied to your entire order when you spend $30 or more",
+  },
+  {
+    title: "Free Kids Meal with 2 Regular Entrees",
+    desc: "   This deal lasts until the end of March! ",
+  },
+];
 
 /*
     The owner has decided to take the 15% off
@@ -107,8 +119,6 @@ const deals = [
 */
 
 //CODE HERE
-
-
 
 /*
     The restaurant is going to continue its
