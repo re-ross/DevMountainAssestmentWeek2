@@ -58,7 +58,7 @@ console.log(pizza.popularity);
 */
 
 //CODE HERE
-console.log(pizza.tags[2]);
+console.log(pizza.tags[1]);
 /*
     Third, destructure the price off of the
     pizza object.
@@ -98,35 +98,35 @@ let foodArr = [
     price: 12,
     popularity: 9,
     rating: 10,
-    tags: "pizza', 'local fav', 'popular'",
+    tags: ["pizza", "local fav", "popular"],
   },
   {
     name: "Hawaii",
     price: 8,
     popularity: 5,
     rating: 5,
-    tags: "pizza', 'controversial', 'tasty'",
+    tags: ["pizza", "controversial", "tasty"],
   },
   {
     name: "Veggie",
     price: 9,
     popularity: 7,
     rating: 7,
-    tags: "pizza', 'healthy', 'popular'",
+    tags: ["pizza", "healthy", "vegetarian"],
   },
   {
     name: "Pepporini",
     price: 9,
     popularity: 8.5,
     rating: 8,
-    tags: "pizza', 'basic', 'popular'",
+    tags: ["pizza", "basic", "popular"],
   },
   {
     name: "Cheeeeese",
     price: 7,
     popularity: 7.5,
     rating: 7.5,
-    tags: "pizza', 'basic', 'popular','kids'",
+    tags: ["pizza", "basic", "popular", "kids"],
   },
 ];
 //////////////////PROBLEM 4////////////////////
@@ -143,7 +143,7 @@ let foodArr = [
 
 //CODE HERE
 
-let foundFood = foodArr.filter((object) => object.tags.includes("popular"));
+let foundFood = foodArr.filter((food) => food.tags.includes("popular"));
 console.log(foundFood);
 
 //////////////////PROBLEM 5////////////////////
@@ -186,7 +186,7 @@ console.log(foundFood);
 */
 
 //CODE HERE
-function filterByProperty(property, number) {
+function filterByProperty(property, number, type) {
   let newArr = foodArr.filter((object) => this.property > number);
   return newArr;
 }
@@ -199,4 +199,3 @@ function filterByProperty(property, number) {
 */
 
 //CODE HERE
-console.log(filterByProperty(this.popularity, 8));
