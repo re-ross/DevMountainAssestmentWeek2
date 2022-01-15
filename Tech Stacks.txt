@@ -1,0 +1,21 @@
+﻿Southwest Airlines:
+
+
+* React JS for the frontend SPAs 
+* Java/Spring for the backend APIs
+* The backend API have a REST interface with JSON
+
+
+Google:
+* Combination of Java and C++ 
+* AngularJS and Preact for frameworks 
+* Combo of Python, Go, and Dart languages (haven’t heard of the latter 2)
+* Material Design / Material Design Lite for interfacing
+* LevelDB and Guava for database / libraries
+
+
+Spotify:
+* Python and Java for frontend /backend 
+* Amazon cloud computing
+* Bootstrap as a frontend framework 
+* Google Cloud Bigtable and PostgreSQL for databases
